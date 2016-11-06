@@ -6,9 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def login(request):
-	#c = {}
-	#c.update(csrf(request))
-	return render_to_response('login.html')#, c)
+	return render_to_response('templates/index.html')#, c)
 
 def auth_view(request):
 	username = request.POST.get('username', '')
