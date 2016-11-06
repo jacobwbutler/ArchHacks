@@ -1,15 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.contrib import auth
+#from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_exempt
 
-#from django.core.context_processors import csrf
-
-# Create your views here.
-def index(request):
-	return render(request, 'patient.html')
 
 def login(request):
 	#c = {}
@@ -28,7 +22,7 @@ def auth_view(request):
 		return HttpResponseRedirect('invalid_login')
 
 def loggedin(request):
-	return render_to_response('loggedin.html', request.user.username)#'full_name': request.user.username)
+	return render_to_response('loggedin.html', 'full_name': request.user.username)
 
 def invalid_login(request):
 	return render_to_response('invalid_login.html')
