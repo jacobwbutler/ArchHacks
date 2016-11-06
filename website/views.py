@@ -23,7 +23,10 @@ def auth_view(request):
 
 	if user is not None:
 		auth.login(request, user)
-		return HttpResponseRedirect('loggedin')
+		if user.has_perm('website.add_case') :
+			return render(request, 'doctor.html')
+		else:
+			return render(request, 'patient.html')
 	else:
 		return HttpResponseRedirect('invalid_login')
 
