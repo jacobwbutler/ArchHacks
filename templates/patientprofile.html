@@ -53,7 +53,7 @@
 													<div class="panel panel-primary">
 														<div class="panel-heading">
 														
-														<h4>Matt Hixon</h4>
+														<h4>John Oliver</h4>
 														
 														</div>
 														<div class="panel-body">
@@ -61,11 +61,11 @@
 																
 																<div class="row">
 																	<ul class="list-group" style="margin-top: 15px">
-																		<li class="list-group-item">Age: </li>
-																		<li class="list-group-item">Sex: </li>
-																		<li class="list-group-item">Date of Birth: </li>
-																		<li class="list-group-item">Weight: </li>
-																		<li class="list-group-item">Height: </li>
+																		<li class="list-group-item">Age: 29</li>
+																		<li class="list-group-item">Sex: M</li>
+																		<li class="list-group-item">Date of Birth: April 23, 1977</li>
+																		<li class="list-group-item">Weight: 145lb</li>
+																		<li class="list-group-item">Height: 6'0''</li>
 																	</ul>
 																</div>
 															</div>
@@ -83,18 +83,39 @@
 																</div>
 																<div class="panel-body">
 																		   
-																			<ul class="list-group">
-																				<li class="list-group-item list-group-item-success"><span id="ContentSection_uxAge">
-																					<div class="row"><div class="col-md-3"><strong>General Overview</strong></div><div class="col-md-3 offset-md-9"><strong>Date: </strong></div>
-																				</li>
-																				<li class="list-group-item list-group-item-warning">
-																				Bacon ipsum dolor amet picanha pastrami chuck t-bone, alcatra cupim chicken shoulder shank biltong sausage. Bacon ham hock ham shankle jerky. Spare ribs ham meatball t-bone jowl frankfurter shoulder hamburger boudin rump drumstick. Ham t-bone sausage doner meatloaf kielbasa beef ribs pork. Brisket shoulder salami sausage meatball landjaeger. Tail beef ribs andouille leberkas. Pork salami ground round picanha alcatra kielbasa swine t-bone pork loin leberkas meatball sausage tail spare ribs.
-																				
-																				
-																				
-																				</li>
+																			<div class="panel panel-default">
+							<div class="panel-heading"><strong>Medication Schedule</strong></div>
+							<div class="panel-body">
+								 <table class="table table-bordered">
+									<thead>
+									  <tr>
+										
+										<th>Mon</th>
+										<th>Tues</th>
+										<th>Wed</th>
+										<th>Thurs</th>
+										<th>Fri</th>
+										<th>Sat</th>
+										<th>Sun</th>
+									  </tr>
+									</thead>
+									<tr>
+										
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: red;"><i class="fa fa-frown-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: red;"><i class="fa fa-frown-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: red;"><i class="fa fa-frown-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+									  </tr>
+									<tbody>
+									</tbody>
+								  </table>
 
-																			</ul>  
+							
+							</div>
+
 																   
 																		</div>
 															
@@ -108,41 +129,43 @@
 													<div class="panel panel-default">
 														<div class="panel-body" style="overflow-y: scroll; max-height: 200px;">
 														<div class="col-lg-12">
-															{% for p in patients %}
 															<div class="row">
 																<div class="panel panel-info">
 																	<div class="panel-body">
 																	<table class="table table-striped">
-																		<tr><th>Date: </th><td> {{ p.cases.notes.time_entered }}</td><th>Note: </th><td> {{ p.cases.notes.description }}</td>
+																		<tr><th>Date: </th><td>2016-11-06</td><th>Note: </th><td> Nevermind, I'm feeling better</td>
 																	
 																	</table>
 																	
 																	</div>
 																</div>
 															</div>
-															{% endfor %}
-															<!--<div class="row">
+														</div>
+														<div class="col-lg-12">
+															<div class="row">
 																<div class="panel panel-info">
 																	<div class="panel-body">
 																	<table class="table table-striped">
-																		<tr><th>Date: </th><td> 09/30/2016</td><th>Symptons: </th><td> coughing</td><td><button type="submit" value="" class="btn btn-primary inline-block">Select</button></td></tr>
+																		<tr><th>Date: </th><td>2016-11-05</td><th>Note: </th><td> I think I broke my pinky</td>
 																	
 																	</table>
 																	
 																	</div>
 																</div>
 															</div>
+														</div>
+														<div class="col-lg-12">
 															<div class="row">
 																<div class="panel panel-info">
 																	<div class="panel-body">
 																	<table class="table table-striped">
-																		<tr><th>Date: </th><td> 09/30/2016</td><th>Symptons: </th><td> coughing</td><td><button type="submit" value="" class="btn btn-primary inline-block">Select</button></td></tr>
+																		<tr><th>Date: </th><td>2016-11-04</td><th>Note: </th><td> My pinky hurts</td>
 																	
 																	</table>
 																	
 																	</div>
 																</div>
-															</div-->
+															</div>
 														</div>
 														</div>
 													</div>
