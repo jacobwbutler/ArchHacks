@@ -1,0 +1,21 @@
+<!--{% extends "base.html" %}-->
+
+    <!--{% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}-->
+
+    <form class="form" method="post" action="." >{% csrf_token %}
+        <input float right type="text" placeholder="Patient Username" name="patient_username">
+        <input float right type="password" placeholder="Password" name="patient_password">
+        <button float right type="submit"  value="Login" id="login-button">Login</button>
+        <button float right type="button" onclick="window.location.href='/register/' ">Register</button>
+        <input float right type="hidden" name="next" value="/home" />
+
+        <input float left type="text" placeholder="Doctor Username" name="doctor_username">
+        <input float left type="password" placeholder="Password" name="doctor_password">
+        <button float left type="submit"  value="Login" id="login-button">Login</button>
+        <button float left type="button" onclick="window.location.href='/register/' ">Register</button>
+        <input float left type="hidden" name="next" value="/home" />
+    </form>
+
+{% endblock %}

@@ -18,7 +18,7 @@ from django.contrib import admin
 from website.views import login, auth_view, logout, invalid_login, loggedin, patient_profile
 
 urlpatterns = [
-	url(r'^DoctorAndMe/', include('website.urls')),
+	url(r'^$', include('website.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', login),
     url(r'^auth_view/$', auth_view),
