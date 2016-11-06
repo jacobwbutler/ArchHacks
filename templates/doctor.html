@@ -1,0 +1,118 @@
+{% extends "head.html" %}
+{% load static %}
+{% block body %}
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Doctor and Me</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+	<!-- Began Page -->
+	<div class="container-fluid">
+		 <div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+			  <ul class="nav nav-sidebar">
+				<li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
+	  
+			  </ul>
+			  
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Prescriptions</h1>
+					<div class="row">	
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<strong>Patient Search</strong>
+								
+							</div>
+							<div class="panel-body" style="background-color: #a4c5fc;">
+								<div class="col-lg-6">
+									<label>Search</label>
+									<input type="text" id="search_patients" name="search_patients" class="search form-control textinput">
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="col-lg-12">
+									<div class="panel">
+										 <table class="table table-striped">
+										  <thead>
+											<tr>
+											  <th>First Name</th>
+											  <th>Last Name</th>
+											  <th>Recent Perscriptions</th>
+											  <!--th>Last Visit</th--> 
+											  <th>SELECT</th>
+											  
+											</tr>
+										  </thead>
+										  <tbody>
+											<tr>
+												<td>Joe</td>
+												<td>Doe</td>
+												<td><ul class="list-group">
+													<li class="list-group-item">
+													Vyvanse
+													</li>
+													<li class="list-group-item">
+													Vyvanse
+													</li>
+												
+												</ul>
+												
+												
+												
+												
+												
+												</td>
+												<td><a href="patientprofiles?uniqueID=1" class="btn btn-primary btn-block">View</a></td>
+										  
+										  </tbody>
+										 </table>
+									</div>
+								
+								</div>
+								
+							</div>
+							<div class="panel-footer">
+							
+							</div>
+						
+						</div>
+					</div>
+				
+	
+	
+	
+	
+	</div>
+	
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
