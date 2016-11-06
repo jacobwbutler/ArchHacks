@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from website.views import login, auth_view, logout, invalid_login, loggedin
+from website.views import login, auth_view, logout, invalid_login, loggedin, patient_profile
 
 urlpatterns = [
 	url(r'^DoctorAndMe/', include('website.urls')),
@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^auth_view/invalid_login$', invalid_login),
     url(r'^logout/$', logout),
     url(r'^auth_view/loggedin/$', loggedin),
+    url(r'^auth_view/patientprofile/$', patient_profile)
 ]

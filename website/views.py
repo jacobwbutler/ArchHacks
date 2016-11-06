@@ -4,12 +4,16 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
+from website.models import Doctor, Adherence, Target, Rx,  Note, Case, Patient
 
 #from django.core.context_processors import csrf
 
 # Create your views here.
 def index(request):
 	return render(request, 'patient.html')
+
+def patient_profile(request):
+	return render_to_response('patientprofile.html')
 
 def login(request):
 	#c = {}
@@ -26,7 +30,10 @@ def auth_view(request):
 		if user.has_perm('website.add_case') :
 			return render(request, 'doctor.html')
 		else:
-			return render(request, 'patient.html')
+			parent = Patient.objects.filter(first_name=user.first_name)
+			case_list = [c.cases for c in Patient.objects.filter(first_name=user.first_name)]
+			print(case_list)
+			return render(request, 'patient.html', {'cases':case_list})
 	else:
 		return HttpResponseRedirect('invalid_login')
 

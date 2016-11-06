@@ -97,15 +97,17 @@
                   <th>More Info</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-				  <td><strong><i class="fa fa-smile-o fa-3" style="font-size: 25px; color:green;" aria-hidden="true"></i></strong>
-                  <td><p style="font-size: 16px">Vyvanse 50MG</p></td>
-                  <td><p style="font-size: 16px">30</p></td>
-                  <td><p style="font-size: 16px">Take one capsule by mouth every morning</p></td>
+              {% for c in cases %}
+              	<tbody>
+                	<tr>
+				  	<td><strong><i class="fa fa-smile-o fa-3" style="font-size: 25px; color:green;" aria-hidden="true"></i></strong>
+                  	<td><p style="font-size: 16px">{{ c.rxs.drug }}</p></td>
+                  	<td><p style="font-size: 16px">{{ c.rxs.size }}</p></td>
+                  	<td><p style="font-size: 16px">{{ c.rxs.info }}</p></td>
             
-                 <td><a class="btn btn-info btn-block inline" data-toggle="modal" data-target="#moreInfo">More Info</a></td>
-                </tr>
+                 	<td><a class="btn btn-info btn-block inline" data-toggle="modal" data-target="#moreInfo">More Info</a></td>
+                	</tr>
+                {% endfor %}
                 
                 
               </tbody>
@@ -123,7 +125,7 @@
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #f5f5f5; border-top-left-radius: 6px; border-top-right-radius: 6px">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-							<h4 class="modal-title" id="myModalLabel">Vyvanse 50MG</h4>
+							<h4 class="modal-title" id="myModalLabel">Aderol 50MG</h4>
 			
 				</div>
 			
@@ -138,11 +140,11 @@
 											<tbody>
 											<tr>
 												<th style="width:25%">Prescription Name:</th>
-												<td><p style="font-size: 14px">Vyvanse</p></td>
+												<td><p style="font-size: 14px">Aderol</p></td>
 											</tr>
 											<tr>
 												<th>Measured Amount (mg):</th>
-												<td><p style="font-size: 14px">50</p></td>
+												<td><p style="font-size: 14px">50mg</p></td>
 											</tr>
 											<tr>
 												<th>Quantity:</th>
@@ -185,13 +187,13 @@
 									</thead>
 									<tr>
 										
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
+										<td><p style="color: green;"><i class="fa fa-smile-o" aria-hidden="true" "></i></p></td>
 									  </tr>
 									<tbody>
 									</tbody>
@@ -202,14 +204,14 @@
 						
 					</div>
 				</div>
-				<div class="row hidden">
+				<div class="row">
 					<div class="col-lg-12">
 						<div class="alert alert-success" style="margin-top:18px;">
 							<p style="font-size: 26px"><strong><i class="fa fa-smile-o fa-3" style="font-size: 36px" aria-hidden="true"></i></strong>&nbsp &nbsp You are up to date on this medication!</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row hidden">
 					<div class="col-lg-12">
 						<div class="alert alert-danger" style="margin-top:18px;">
 							<p style="font-size: 26px"><strong><i class="fa fa-frown-o fa-3" style="font-size: 36px" aria-hidden="true"></i></strong>&nbsp &nbsp Medication needs to be taken!</p>

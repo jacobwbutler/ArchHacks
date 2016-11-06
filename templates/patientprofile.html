@@ -103,14 +103,25 @@
 															</div>
 													</div>
 													
-															
-											
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="panel panel-default">
 														<div class="panel-body" style="overflow-y: scroll; max-height: 200px;">
 														<div class="col-lg-12">
+															{% for p in patients %}
 															<div class="row">
+																<div class="panel panel-info">
+																	<div class="panel-body">
+																	<table class="table table-striped">
+																		<tr><th>Date: </th><td> {{ p.cases.notes.time_entered }}</td><th>Note: </th><td> {{ p.cases.notes.description }}</td>
+																	
+																	</table>
+																	
+																	</div>
+																</div>
+															</div>
+															{% endfor %}
+															<!--<div class="row">
 																<div class="panel panel-info">
 																	<div class="panel-body">
 																	<table class="table table-striped">
@@ -131,24 +142,13 @@
 																	
 																	</div>
 																</div>
-															</div>
-															<div class="row">
-																<div class="panel panel-info">
-																	<div class="panel-body">
-																	<table class="table table-striped">
-																		<tr><th>Date: </th><td> 09/30/2016</td><th>Symptons: </th><td> coughing</td><td><button type="submit" value="" class="btn btn-primary inline-block">Select</button></td></tr>
-																	
-																	</table>
-																	
-																	</div>
-																</div>
-															</div>
+															</div-->
 														</div>
 														</div>
 													</div>
 												</div>	
 											</div>
-											</div>
+										</div>
 											
 									
 									</div>																																					
